@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Розв'язання нелінійних рівнянь</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="method box">
+			<div class="methods">
+				<label for="method">Оберіть метод</label>
+				<select name="method" id="method">
+					<option value="bisection">Ділення навпіл</option>
+					<option value="newton">Метод Ньютона</option>
+				</select>
+			</div>
+			<div class="equation">
+				<label for="equation">Оберіть рівняння</label>
+				<select name="equation" id="equation">
+					<option value="square">x * x - 4.0</option>
+					<option value="sine">sin(x) - 0.5</option>
+				</select>
+			</div>
+		</div>
+		<div class="input box">
+			<h2>Вхідні дані</h2>
+			<div class="input">
+				<p>a =</p>
+				<input type="number" id="a">
+			</div>
+			<div class="input">
+				<p>b =</p>
+				<input type="number" id="b">
+			</div>
+			<div class="input">
+				<p>Eps =</p>
+				<input type="number" id="eps">
+			</div>
+			<div class="input" id="kmax-box">
+				<p>Kmax =</p>
+				<input type="number" id="kmax">
+			</div>
+		</div>
+		<div class="buttons box">
+			<button id="solve">Розв'язати</button>
+			<button id="clear">Очистити</button>
+		</div>
+		<div class="results box">
+			<h2>Результати</h2>
+			<div class="input">
+				<p>Корінь x* =</p>
+				<input type="number" readonly id="root">
+			</div>
+			<div class="input">
+				<p>К-ть поділів =</p>
+				<input type="number" readonly id="iterations">
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
